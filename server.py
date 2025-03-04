@@ -196,3 +196,7 @@ async def predict(data: InputData):
     except Exception as e:
         return {"error": str(e)}
 
+if __name__ == "__main__":
+    import uvicorn
+    port = int(os.environ.get("PORT", 10000))  # مقدار پورت را از متغیر محیطی می‌گیرد
+    uvicorn.run(app, host="0.0.0.0", port=port)
