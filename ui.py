@@ -61,8 +61,7 @@ for feature in fertility_features:
 
 # **ایجاد دکمه برای ارسال اطلاعات به سرور**
 if st.button("📊 پیش‌بینی موفقیت"):
-    FASTAPI_URL = os.getenv("FASTAPI_URL", "https://your-fastapi-service.onrender.com")  # جایگزین با آدرس واقعی
-
+    FASTAPI_URL = os.getenv("FASTAPI_URL", https://fertility-prediction.onrender.com")  # جایگزین با آدرس واقعی
     response = requests.post(f"{FASTAPI_URL}/predict/", json=user_data)
 
 
