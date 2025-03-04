@@ -198,6 +198,8 @@ async def predict(data: InputData):
 
 if __name__ == "__main__":
     import os
-    port = int(os.environ.get("PORT", 8501))  # مقدار پورت را از متغیر محیطی می‌گیرد
-    st.experimental_set_query_params(port=port)
+    import uvicorn
+    port = int(os.environ.get("PORT", 8000))  # مقدار پورت را از متغیر محیطی می‌گیرد
+    uvicorn.run(app, host="0.0.0.0", port=port)
+
 
