@@ -75,4 +75,5 @@ if st.button("📊 پیش‌بینی موفقیت"):
 if __name__ == "__main__":
     import os
     port = int(os.environ.get("PORT", 8501))  # مقدار پورت را از متغیر محیطی می‌گیرد
-    st.run(port=port, address="0.0.0.0")
+    os.system(f"streamlit run ui.py --server.port {port} --server.address 0.0.0.0")
+
